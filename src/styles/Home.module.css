@@ -114,7 +114,6 @@
 
 
 .container {
-  font-family: Montserrat;
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 7px;
@@ -213,7 +212,7 @@
 
 .redBtn {
   display: inline-flex;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   border-radius: 99px;
   color: rgb(255, 255, 255);
   font-size: 14px;
