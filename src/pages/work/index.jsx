@@ -36,22 +36,24 @@ export default function Home() {
 			<main>
 				<div className={styles.gallery}>
 					<div className={styles.galleryItem}>
-						<Image
-							width={340}
-							height={735}
-							src="/images/coverPage/Cover_1-Show.png"
-							alt="work show"
-							// เพิ่มเวลาในการโหลดหน้าเว็บ ใช้เฉพาะรูปภาพสำคัญ
-							// priority
-						/>
-						<div className={styles.galleryItemOverlay}>
+						<Link href="/work/show">
 							<Image
 								width={340}
 								height={735}
-								src="/images/coverPage/hover/HCover_1-Show.png"
-								alt="work show (hover)"
+								src="/images/coverPage/Cover_1-Show.png"
+								alt="work show"
+								// เพิ่มเวลาในการโหลดหน้าเว็บ ใช้เฉพาะรูปภาพสำคัญ
+								// priority
 							/>
-						</div>
+							<div className={styles.galleryItemOverlay}>
+								<Image
+									width={340}
+									height={735}
+									src="/images/coverPage/hover/HCover_1-Show.png"
+									alt="work show (hover)"
+								/>
+							</div>
+						</Link>
 					</div>
 					<div className={styles.galleryItem}>
 						<Image

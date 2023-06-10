@@ -31,10 +31,8 @@ export default function Home() {
 				</div>
 			</header>
 			<main>
-				<div className={styles.videoContainer}>
+				<div className={styles.videoItem}>
 					<iframe
-						width="1024"
-						height="576"
 						src="https://www.youtube.com/embed/wQ65XGhoM78"
 						title="YouTube video player"
 						frameBorder="0"

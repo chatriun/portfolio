@@ -108,17 +108,10 @@
   position: relative;
 }
 
-
-
-
-
-
 .container {
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 7px;
-  /* responsive not work */
-  /* width: 57%; */
 }
 
 .header {
@@ -191,13 +184,33 @@
   opacity: 1;
 }
 
+.pageShow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 
 .videoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* TODO: responsive url */
+.videoColumn {
+  flex: 1;
+}
+
+.videoItem {
+  display: block;
   position: relative;
-  padding-bottom: 56.22%;
+  /* responsive web design ratio 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
 }
-.videoContainer iframe {
+
+.videoItem iframe {
   position: absolute;
   top: 0;
   left: 0;
