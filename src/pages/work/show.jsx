@@ -5,19 +5,44 @@ import Link from 'next/link';
 function Home() {
 	const show = [
 		{
-			name: 'travel-1',
+			name: 'show-1',
 			url: ['https://www.youtube.com/embed/GabZY3yBX68'],
 		},
 		{
-			name: 'travel-2',
+			name: 'show-2',
 			url: [
 				'https://www.youtube.com/embed/YCquoQMVGsc',
 				'https://www.youtube.com/embed/EyzE7ihdcMs',
 			],
 		},
 		{
-			name: 'travel-3',
-			url: ['https://www.youtube.com/embed/GabZY3yBX68'],
+			name: 'show-3',
+			url: ['https://www.youtube.com/embed/hGPcvBIVcZI'],
+		},
+		{
+			name: 'show-4',
+			url: [
+				'https://www.youtube.com/embed/SxInQ7RXrxY',
+				'https://www.youtube.com/embed/ptPLoQ4Z04E',
+			],
+		},
+		{
+			name: 'show-5',
+			url: [
+				'https://www.youtube.com/embed/9isFWG7llZs',
+				'https://www.youtube.com/embed/-cHshDX9brI',
+			],
+		},
+		{
+			name: 'show-6',
+			url: ['https://www.youtube.com/embed/OppPfO6vxmE'],
+		},
+		{
+			name: 'show-7',
+			url: [
+				'https://www.youtube.com/embed/iL997E-LPzY',
+				'https://www.youtube.com/embed/DJMlwMWPPcQ',
+			],
 		},
 	];
 

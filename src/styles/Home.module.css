@@ -190,6 +190,12 @@
   gap: 8px;
 }
 
+.pageTravel{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .videoContainer {
   display: flex;
   flex-wrap: wrap;
@@ -202,15 +208,42 @@
   flex: 1;
 }
 
+.gifColumn {
+  display: flex;
+}
+
 .videoItem {
   display: block;
   position: relative;
   /* responsive web design ratio 16:9 */
   padding-bottom: 56.25%;
   height: 0;
+  flex: 1
 }
 
 .videoItem iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.videoCol {
+  flex: 1 ;
+}
+
+.testVideo {
+  display: block;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  flex: 1
+}
+
+.testVideo iframe {
   position: absolute;
   top: 0;
   left: 0;

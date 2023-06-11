@@ -56,20 +56,22 @@ export default function Home() {
 						</Link>
 					</div>
 					<div className={styles.galleryItem}>
-						<Image
-							width={340}
-							height={735}
-							src="/images/coverPage/Cover_2-Travel.png"
-							alt="work travel"
-						/>
-						<div className={styles.galleryItemOverlay}>
+						<Link href="/work/travel">
 							<Image
 								width={340}
 								height={735}
-								src="/images/coverPage/hover/HCover_2-Travel.png"
-								alt="work travel (hover)"
+								src="/images/coverPage/Cover_2-Travel.png"
+								alt="work travel"
 							/>
-						</div>
+							<div className={styles.galleryItemOverlay}>
+								<Image
+									width={340}
+									height={735}
+									src="/images/coverPage/hover/HCover_2-Travel.png"
+									alt="work travel (hover)"
+								/>
+							</div>
+						</Link>
 					</div>
 					<div className={styles.galleryItem}>
 						<Image
