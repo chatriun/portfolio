@@ -40,19 +40,54 @@ function Home() {
 				},
 			],
 		},
-		// {
-		// 	name: 'travel-4',
-		// 	media: [
-		// 		{
-		// 			url: '/images/travel/travel_38.gif',
-		// 			type: 'image',
-		// 		},
-		// 		{
-		// 			url: 'https://www.youtube.com/embed/Sa8YpBhugBo',
-		// 			type: 'iframe',
-		// 		},
-		// 	],
-		// },
+		{
+			name: 'travel-4',
+			media: [
+				{
+					url: '/images/travel/travel_38.gif',
+					type: 'image',
+					width: '428',
+					height: '315',
+				},
+				{
+					url: 'https://www.youtube.com/embed/Sa8YpBhugBo',
+					type: 'iframe',
+				},
+			],
+		},
+		{
+			name: 'travel-5',
+			media: [
+				{
+					url: '/images/travel/travel_31.gif',
+					type: 'image',
+					width: '1020',
+					height: '580',
+				},
+			],
+		},
+		{
+			name: 'travel-6',
+			media: [
+				{
+					url: 'https://www.youtube.com/embed/2odWpfeAw88',
+					type: 'iframe',
+				},
+				{
+					url: 'https://www.youtube.com/embed/JGY50FyXgg0',
+					type: 'iframe',
+				},
+			],
+		},
+		{
+			name: 'travel-7',
+			media: [
+				{
+					url: 'https://www.youtube.com/embed/BuT_l6mqtKw',
+					type: 'iframe',
+				},
+			],
+		},
 	];
 
 	return (
@@ -87,8 +122,8 @@ function Home() {
 					<div key={`container-${row.name}`} className={styles.videoContainer}>
 						{row.media.map((media) => (
 							<div
-								key={`items-${row.name}-${media}`}
-								className={styles.videoColumn}
+								key={`items-${media.url}`}
+								className={media.type === 'iframe' ? styles.videoColumn : ''}
 							>
 								{media.type === 'iframe' ? (
 									<div className={styles.videoItem}>
@@ -101,41 +136,18 @@ function Home() {
 										></iframe>
 									</div>
 								) : (
-									<div className={styles.imageGif}>
-										<Image
-											width={428}
-											height={315}
-											src={media.url}
-											alt="travel"
-										/>
-									</div>
+									<Image
+										className={styles.gifImage}
+										width={media.width}
+										height={media.height}
+										src={media.url}
+										alt="travel"
+									/>
 								)}
 							</div>
 						))}
 					</div>
 				))}
-
-				<div className={styles.videoContainer}>
-					<div className={styles.testColumn}>
-						<Image
-							width={428}
-							height={315}
-							src="/images/travel/travel_38.gif"
-							alt="travel"
-						/>
-					</div>
-					<div className={styles.videoCol}>
-						<div className={styles.testVideo}>
-							<iframe
-								src="https://www.youtube.com/embed/86voUpRDQt8"
-								title="YouTube video player"
-								frameBorder="0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								allowFullScreen
-							></iframe>
-						</div>
-					</div>
-				</div>
 			</main>
 		</div>
 	);
