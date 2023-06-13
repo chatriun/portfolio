@@ -111,7 +111,7 @@
 .container {
   max-width: 1024px;
   margin: 0 auto;
-  padding: 0 7px;
+  padding: 0 7px 30px;
 }
 
 .header {
@@ -147,6 +147,31 @@
 .right nav a {
   color:#aaa;
   text-decoration: none;
+}
+
+.right nav a:hover {
+  color: #000000;
+}
+
+.btt {
+  text-align: center;
+  align-items: center;
+  padding-top: 60px;;
+  padding-bottom: 60px;
+  color: #aaa;
+}
+
+.btt nav ul {
+  list-style: none;
+}
+
+.btt nav {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btt nav:hover {
+color: #000000;
 }
 
 .gallery {
@@ -196,6 +221,12 @@
   gap: 8px;
 }
 
+.pageArtwork {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .videoContainer {
   display: flex;
   /* use warp with width */
@@ -208,12 +239,6 @@
 .videoColumn {
   /* grow-shrink-basis */
   flex: 1 1 100%;
-}
-
-.gifImage {
-  width: 100%;
-  height: auto;
-  display: none;
 }
 
 .videoItem {
@@ -231,6 +256,12 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.gifImage {
+  width: 100%;
+  height: auto;
+  display: none;
 }
 
 .buttonContainer {

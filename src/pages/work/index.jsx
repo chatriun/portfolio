@@ -74,116 +74,130 @@ export default function Home() {
 						</Link>
 					</div>
 					<div className={styles.galleryItem}>
-						<Image
-							width={340}
-							height={735}
-							src="/images/coverPage/Cover_3-Challenge.png"
-							alt="work challenge"
-						/>
-						<div className={styles.galleryItemOverlay}>
+						<Link href="/work/challenge">
 							<Image
 								width={340}
 								height={735}
-								src="/images/coverPage/hover/HCover_3-Challenge.png"
-								alt="work challenge (hover)"
+								src="/images/coverPage/Cover_3-Challenge.png"
+								alt="work challenge"
 							/>
-						</div>
+							<div className={styles.galleryItemOverlay}>
+								<Image
+									width={340}
+									height={735}
+									src="/images/coverPage/hover/HCover_3-Challenge.png"
+									alt="work challenge (hover)"
+								/>
+							</div>
+						</Link>
 					</div>
 					<div className={styles.galleryItem}>
-						<Image
-							width={340}
-							height={735}
-							src="/images/coverPage/Cover_4-Shopping.png"
-							alt="work shopping"
-						/>
-						<div className={styles.galleryItemOverlay}>
+						<Link href="/work/shopping">
 							<Image
 								width={340}
 								height={735}
-								src="/images/coverPage/hover/HCover_4-Shopping.png"
-								alt="work shopping (hover)"
+								src="/images/coverPage/Cover_4-Shopping.png"
+								alt="work shopping"
 							/>
-						</div>
+							<div className={styles.galleryItemOverlay}>
+								<Image
+									width={340}
+									height={735}
+									src="/images/coverPage/hover/HCover_4-Shopping.png"
+									alt="work shopping (hover)"
+								/>
+							</div>
+						</Link>
 					</div>
 					<div className={styles.galleryItem}>
-						<Image
-							width={340}
-							height={735}
-							src="/images/coverPage/Cover_5-KKK.png"
-							alt="work kkk"
-						/>
-						<div className={styles.galleryItemOverlay}>
+						<Link href="/work/kkk">
 							<Image
 								width={340}
 								height={735}
-								src="/images/coverPage/hover/HCover_5-KKK.png"
-								alt="work kkk (hover)"
+								src="/images/coverPage/Cover_5-KKK.png"
+								alt="work kkk"
 							/>
-						</div>
+							<div className={styles.galleryItemOverlay}>
+								<Image
+									width={340}
+									height={735}
+									src="/images/coverPage/hover/HCover_5-KKK.png"
+									alt="work kkk (hover)"
+								/>
+							</div>
+						</Link>
 					</div>
 					<div className={styles.galleryItem}>
-						<Image
-							width={340}
-							height={735}
-							src="/images/coverPage/Cover_6-Review.png"
-							alt="work review"
-						/>
-						<div className={styles.galleryItemOverlay}>
+						<Link href="/work/review">
 							<Image
 								width={340}
 								height={735}
-								src="/images/coverPage/hover/HCover_6-Review.png"
-								alt="work review (hover)"
+								src="/images/coverPage/Cover_6-Review.png"
+								alt="work review"
 							/>
-						</div>
+							<div className={styles.galleryItemOverlay}>
+								<Image
+									width={340}
+									height={735}
+									src="/images/coverPage/hover/HCover_6-Review.png"
+									alt="work review (hover)"
+								/>
+							</div>
+						</Link>
 					</div>
 					<div className={styles.galleryItem}>
-						<Image
-							width={340}
-							height={735}
-							src="/images/coverPage/Cover_7-Vlog.png"
-							alt="work vlog"
-						/>
-						<div className={styles.galleryItemOverlay}>
+						<Link href="/work/vlog">
 							<Image
 								width={340}
 								height={735}
-								src="/images/coverPage/hover/HCover_7-Vlog.png"
-								alt="work vlog (hover)"
+								src="/images/coverPage/Cover_7-Vlog.png"
+								alt="work vlog"
 							/>
-						</div>
+							<div className={styles.galleryItemOverlay}>
+								<Image
+									width={340}
+									height={735}
+									src="/images/coverPage/hover/HCover_7-Vlog.png"
+									alt="work vlog (hover)"
+								/>
+							</div>
+						</Link>
 					</div>
 					<div className={styles.galleryItem}>
-						<Image
-							width={340}
-							height={735}
-							src="/images/coverPage/Cover_8-Knowledge.png"
-							alt="work knowledge"
-						/>
-						<div className={styles.galleryItemOverlay}>
+						<Link href="/work/knowledge">
 							<Image
 								width={340}
 								height={735}
-								src="/images/coverPage/hover/HCover_8-Knowledge.png"
-								alt="work knowledge (hover)"
+								src="/images/coverPage/Cover_8-Knowledge.png"
+								alt="work knowledge"
 							/>
-						</div>
+							<div className={styles.galleryItemOverlay}>
+								<Image
+									width={340}
+									height={735}
+									src="/images/coverPage/hover/HCover_8-Knowledge.png"
+									alt="work knowledge (hover)"
+								/>
+							</div>
+						</Link>
 					</div>
 					<div className={styles.galleryItem}>
-						<Image
-							width={340}
-							height={735}
-							src="/images/coverPage/Cover_9-Artwork.png"
-							alt="work artwork"
-						/>
-						<div className={styles.galleryItemOverlay}>
+						<Link href="/work/artwork">
 							<Image
 								width={340}
 								height={735}
-								src="/images/coverPage/hover/HCover_9-Artwork.png"
-								alt="work artwork (hover)"
+								src="/images/coverPage/Cover_9-Artwork.png"
+								alt="work artwork"
 							/>
-						</div>
+							<div className={styles.galleryItemOverlay}>
+								<Image
+									width={340}
+									height={735}
+									src="/images/coverPage/hover/HCover_9-Artwork.png"
+									alt="work artwork (hover)"
+								/>
+							</div>
+						</Link>
 					</div>
 				</div>
 			</main>
