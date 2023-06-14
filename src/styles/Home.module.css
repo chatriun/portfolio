@@ -264,6 +264,47 @@ color: #000000;
   display: none;
 }
 
+
+
+
+
+/* example */
+.flexbox {
+  display: flex;
+  gap: 8px;
+}
+
+.item3, .item4 {
+  height: 60px
+}
+.item3 {
+  flex: 1 1 100%;
+  background-color: lightblue
+}
+.item4 {
+  flex: 0 0 100%;
+  background-color: goldenrod
+}
+
+
+
+.gifContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gifItem {
+  flex: 1 1 auto;
+  align-items: center;
+  gap: 8px;
+}
+
+/* เหลื่อมๆ */
+.gifItemAA {
+  flex: 0 1 100%;
+}
+
 .buttonContainer {
   text-align: center;
   margin: 24px 0;
