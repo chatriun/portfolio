@@ -1,54 +1,7 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
-import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState, useMemo } from 'react';
-
-const ImageRow = ({ mediaArtworks }) => {
-	const [imageData, setImageData] = useState([]);
-	const onLoadImage = (e, index) => {
-		const newWidth = (e.target.width * 500) / e.target.height;
-		const newImageData = [...imageData];
-		newImageData[index] = newWidth;
-		setImageData(newImageData);
-	};
-	const calculatedWidthPercent = useMemo(() => {
-		// (partialSum, a) => partialSum + a, 0 อันนี้เขียนแบบ short return
-		const sum = imageData.reduce((partialSum, a) => partialSum + a, 0);
-		// สามาดเขียน return imageData.map((data) => (data * 100) / sum) ก็ได้เพราะไม่จำเป็นต้องสร้างตัวแปรเพื่อ return
-		const newCalculated = imageData.map((data) => {
-			return (data * 100) / sum;
-		});
-		return newCalculated;
-	}, [imageData]);
-
-	return (
-		<div className={styles.gifContainer}>
-			{mediaArtworks.map((media, index) => (
-				<Image
-					key={media.url}
-					width={0}
-					height={0}
-					style={{
-						// width: calculatedWidthPercent?.[index]
-						// 	? `${calculatedWidthPercent?.[index]}%`
-						// 	: '100%',
-						height: 'auto',
-						flex: `${
-							calculatedWidthPercent?.[index]
-								? `${calculatedWidthPercent[index]}%`
-								: '100%'
-						} 1 1`,
-					}}
-					src={media.url}
-					alt="artwork"
-					// สร้าง fn มาครอบเพื่อรับ parameter จาก callback แล้วส่งไป fn ข้างบนอีกที
-					onLoad={(event) => onLoadImage(event, index)}
-				/>
-			))}
-		</div>
-	);
-};
+import ImageRow from '@/components/ImageRow';
 
 function Home() {
 	const artwork = [
@@ -86,6 +39,145 @@ function Home() {
 			{
 				type: 'image',
 				url: '/images/artwork/artwork_5-3.gif',
+			},
+		],
+		[
+			{
+				type: 'iframe',
+				url: 'https://www.youtube.com/embed/Bc89HufDol4',
+			},
+		],
+		[
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_28.gif',
+			},
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_4-2.gif',
+			},
+		],
+		[
+			// ระเบิด
+			{
+				type: 'iframe',
+				url: 'https://www.instagram.com/p/CP-n7rKqBIf/embed',
+				width: '605',
+				height: '1000',
+			},
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_45.gif',
+			},
+		],
+		[
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_128.gif',
+			},
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_111.gif',
+			},
+		],
+		[
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_102.gif',
+			},
+		],
+		[
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_26.gif',
+			},
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_42.gif',
+			},
+		],
+		[
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_sara.gif',
+			},
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_135.gif',
+			},
+		],
+		[
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_121.gif',
+			},
+		],
+		[
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_16.gif',
+			},
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_19.gif',
+			},
+		],
+		[
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_41.gif',
+			},
+		],
+		[
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_69.gif',
+			},
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_96.gif',
+			},
+		],
+		[
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_157.gif',
+			},
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_43.gif',
+			},
+		],
+		[
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_31.gif',
+			},
+		],
+		[
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_97.gif',
+			},
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_133.gif',
+			},
+		],
+		[
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_101.gif',
+			},
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_gnd.gif',
+			},
+		],
+		[
+			{
+				type: 'image',
+				url: '/images/artwork/artwork_20.gif',
 			},
 		],
 	];
