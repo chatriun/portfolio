@@ -51,7 +51,15 @@ const ImageRow = ({ mediaArtworks }) => {
 							} 1 1`,
 						}}
 					>
-						<div className={styles.videoItem}>
+						<div
+							className={styles.videoItem}
+							style={
+								media.width &&
+								media.height && {
+									paddingBottom: `${(media.height * 100) / media.width}%`,
+								}
+							}
+						>
 							<iframe
 								onLoad={(event) => onLoadImage(event, index)}
 								src={media.url}

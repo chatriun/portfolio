@@ -62,8 +62,8 @@ function Home() {
 			{
 				type: 'iframe',
 				url: 'https://www.instagram.com/p/CP-n7rKqBIf/embed',
-				width: '605',
-				height: '1000',
+				width: '600',
+				height: '760',
 			},
 			{
 				type: 'image',
@@ -209,10 +209,16 @@ function Home() {
 					</nav>
 				</div>
 			</header>
-			<main className={styles.pageArtwork}>
-				{artwork.map((row, index) => (
-					<ImageRow key={index} mediaArtworks={row} />
-				))}
+			<main>
+				<h1 className={styles.pageTitle}>Artwork</h1>
+				<p className={styles.pageDescription}>
+					some graphics and videos made for use in my work
+				</p>
+				<div className={styles.pageArtwork}>
+					{artwork.map((row, index) => (
+						<ImageRow key={index} mediaArtworks={row} />
+					))}
+				</div>
 			</main>
 		</div>
 	);
