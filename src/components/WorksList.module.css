@@ -1,0 +1,28 @@
+.videoContainer {
+  display: flex;
+  /* use warp with width */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.videoColumn {
+  /* grow-shrink-basis */
+  flex: 1 1 100%;
+}
+
+.videoItem {
+  display: block;
+  position: relative;
+  /* responsive web design ratio 16:9 */
+  padding-bottom: 56.25%;
+  height: 0;
+  flex: 1
+}
+
+.gifImage {
+  width: 100%;
+  height: auto;
+  display: none;
+}

@@ -1,9 +1,7 @@
-import Head from 'next/head';
-import styles from '@/styles/Home.module.css';
-import Link from 'next/link';
+import classes from '../../../styles/Page.module.css';
 import ImageRow from '@/components/ImageRow';
 
-function Home() {
+const ArtworkPage = () => {
 	const artwork = [
 		[
 			{
@@ -183,45 +181,18 @@ function Home() {
 	];
 
 	return (
-		<div className={styles.container}>
-			<Head>
-				<title>ANYAWEE SR</title>
-				<meta name="description" content="Portfolio of Anyawee Sr." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="images\icon\FavItem-2.png" />
-			</Head>
-			<header className={styles.header}>
-				<div className={styles.left}>
-					<Link href="/">
-						<h1>ANYAWEE SR.</h1>
-					</Link>
-				</div>
-				<div className={styles.right}>
-					<nav>
-						<ul>
-							<li>
-								<Link href="/work">WORK</Link>
-							</li>
-							<li>
-								<Link href="/me">ABOUT ME</Link>
-							</li>
-						</ul>
-					</nav>
-				</div>
+		<div>
+			<header className={classes.header}>
+				<h1>Artwork</h1>
+				<p>some graphics and videos made for use in my work</p>
 			</header>
-			<main>
-				<h1 className={styles.pageTitle}>Artwork</h1>
-				<p className={styles.pageDescription}>
-					some graphics and videos made for use in my work
-				</p>
-				<div className={styles.pageArtwork}>
-					{artwork.map((row, index) => (
-						<ImageRow key={index} mediaArtworks={row} />
-					))}
-				</div>
+			<main className={classes.content}>
+				{artwork.map((row, index) => (
+					<ImageRow key={index} mediaArtworks={row} />
+				))}
 			</main>
 		</div>
 	);
-}
+};
 
-export default Home;
+export default ArtworkPage;
