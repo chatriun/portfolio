@@ -1,33 +1,8 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 import Link from 'next/link';
-import Image from 'next/image';
-import ImageRow from '@/components/ImageRow';
 
 function Me() {
-	const test = [
-		[
-			{
-				type: 'iframe',
-				url: 'https://www.youtube.com/embed/Bc89HufDol4',
-			},
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_137.gif',
-			},
-		],
-		[
-			{
-				type: 'iframe',
-				url: 'https://www.youtube.com/embed/Bc89HufDol4',
-			},
-			{
-				type: 'iframe',
-				url: 'https://www.youtube.com/embed/Bc89HufDol4',
-			},
-		],
-	];
-
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -55,11 +30,7 @@ function Me() {
 					</nav>
 				</div>
 			</header>
-			<main className={styles.pageArtwork}>
-				{test.map((row, index) => (
-					<ImageRow key={index} mediaArtworks={row} />
-				))}
-			</main>
+			<main></main>
 		</div>
 	);
 }

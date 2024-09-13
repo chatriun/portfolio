@@ -4,12 +4,14 @@ import styles from '@/styles/Home.module.css';
 
 const ImageRow = ({ mediaArtworks }) => {
 	const [imageData, setImageData] = useState([]);
+
 	const onLoadImage = (e, index) => {
 		const newWidth = (e.target.offsetWidth * 500) / e.target.offsetHeight;
 		const newImageData = [...imageData];
 		newImageData[index] = newWidth;
 		setImageData(newImageData);
 	};
+
 	const calculatedWidthPercent = useMemo(() => {
 		const sum = imageData.reduce((partialSum, a) => partialSum + a, 0);
 		const newCalculated = imageData.map((data) => {
