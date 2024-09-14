@@ -18,11 +18,33 @@
   /* responsive web design ratio 16:9 */
   padding-bottom: 56.25%;
   height: 0;
-  flex: 1
+  flex: 1;
+  min-width: 0;
+}
+
+.videoItem iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .gifImage {
   width: 100%;
   height: auto;
   display: none;
+}
+
+/* TODO: responsive fail */
+@media screen and (min-width: 540px){
+  .videoColumn {
+    flex: 1
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .gifImage {
+    display: block;
+  }
 }

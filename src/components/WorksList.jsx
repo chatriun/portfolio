@@ -11,7 +11,7 @@ const WorksList = ({ work }) => {
 					className={workItem.type === 'iframe' && classes.videoColumn}
 				>
 					{workItem.type === 'iframe' ? (
-						<LinkYoutube workItem={workItem} />
+						<LinkYoutube workItem={workItem.url} />
 					) : (
 						<Image
 							className={classes.gifImage}
