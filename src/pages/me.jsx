@@ -1,13 +1,7 @@
-import Head from 'next/head';
-import styles from '@/styles/Home.module.css';
-import Link from 'next/link';
+import classes from '../styles/Page.module.css';
 
-function Me() {
-	return (
-		<div className={styles.container}>
-			<main></main>
-		</div>
-	);
-}
+const AboutMePage = () => {
+	return <div className={classes.container}></div>;
+};
 
-export default Me;
+export default AboutMePage;
