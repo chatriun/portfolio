@@ -3,6 +3,7 @@ import classes from './Layout.module.css';
 
 const Layout = ({ children }) => {
 	return (
+		// TODO: MainNavigation move
 		<main className={classes.main}>
 			<MainNavigation />
 			{children}
