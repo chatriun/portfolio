@@ -1,13 +1,17 @@
+// TODO: iframe not working
+
 import { useMemo, useState } from 'react';
 import Image from 'next/image';
 import classes from '@/styles/Page.module.css';
 import styles from './WorksList.module.css';
+import LinkYoutube from './LinkYoutube';
 
-const ImageRow = ({ mediaArtworks }) => {
+const CustomGrid = ({ work }) => {
 	const [imageData, setImageData] = useState([]);
 
-	const onLoadImage = (e, index) => {
+	const onLoadImage = (e, index, id) => {
 		const newWidth = (e.target.offsetWidth * 500) / e.target.offsetHeight;
+		console.log(id, newWidth);
 		const newImageData = [...imageData];
 		newImageData[index] = newWidth;
 		setImageData(newImageData);
@@ -22,10 +26,10 @@ const ImageRow = ({ mediaArtworks }) => {
 
 	return (
 		<div className={classes.artworkContainer}>
-			{mediaArtworks.map((media, index) =>
-				media.type === 'image' ? (
+			{work.map((workItem, index) =>
+				workItem.type === 'image' ? (
 					<Image
-						key={media.url}
+						key={workItem.url}
 						width={0}
 						height={0}
 						style={{
@@ -36,14 +40,14 @@ const ImageRow = ({ mediaArtworks }) => {
 									: '100%'
 							} 1 1`,
 						}}
-						src={media.url}
+						src={workItem.url}
 						alt="artwork"
 						// สร้าง fn มาครอบเพื่อรับ parameter จาก callback แล้วส่งไป fn ข้างบนอีกที
-						onLoad={(event) => onLoadImage(event, index)}
+						onLoad={(event) => onLoadImage(event, index, workItem.id)}
 					/>
 				) : (
 					<div
-						key={media.url}
+						key={workItem.url}
 						style={{
 							height: 'auto',
 							flex: `${
@@ -53,23 +57,33 @@ const ImageRow = ({ mediaArtworks }) => {
 							} 1 1`,
 						}}
 					>
-						<div
+						{/* <div
 							className={styles.videoItem}
 							style={
-								media.width &&
-								media.height && {
-									paddingBottom: `${(media.height * 100) / media.width}%`,
+								workItem.width &&
+								workItem.height && {
+									paddingBottom: `${(workItem.height * 100) / workItem.width}%`,
 								}
 							}
 						>
 							<iframe
 								onLoad={(event) => onLoadImage(event, index)}
-								src={media.url}
+								src={workItem.url}
 								title="YouTube video player"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 								allowFullScreen
 							/>
-						</div>
+						</div> */}
+						<LinkYoutube
+							style={
+								workItem.width &&
+								workItem.height && {
+									paddingBottom: `${(workItem.height * 100) / workItem.width}%`,
+								}
+							}
+							workItem={workItem.url}
+							onLoadImage={onLoadImage}
+						/>
 					</div>
 				)
 			)}
@@ -77,4 +91,4 @@ const ImageRow = ({ mediaArtworks }) => {
 	);
 };
 
-export default ImageRow;
+export default CustomGrid;

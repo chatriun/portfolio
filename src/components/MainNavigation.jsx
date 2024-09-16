@@ -24,7 +24,7 @@ const MainNavigation = () => {
 								<Link href="/work">WORK</Link>
 							</li>
 							<li>
-								<Link href="/me">ABOUT ME</Link>
+								<Link href="/refactor-artwork">ABOUT ME</Link>
 							</li>
 						</ul>
 					</nav>

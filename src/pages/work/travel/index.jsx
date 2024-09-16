@@ -93,6 +93,7 @@ const DUMMY_WORKS = [
 	},
 ];
 
+// TODO: iframe + image = broke
 const TravelPage = () => {
 	return (
 		<main className={classes.container}>
