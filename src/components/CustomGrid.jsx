@@ -3,6 +3,7 @@ import Image from 'next/image';
 import classes from '@/styles/Page.module.css';
 import LinkYoutube from './LinkYoutube';
 
+// TODO: refactor, rename function
 const CustomGrid = ({ work }) => {
 	const [imageData, setImageData] = useState([]);
 
