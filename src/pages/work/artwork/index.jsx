@@ -287,6 +287,16 @@ export const getStaticProps = async () => {
 };
 
 const ArtworkPage = ({ artwork }) => {
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
+	const handleOpenModal = () => {
+		setIsModalOpen(true);
+	};
+
+	const handleCloseModal = () => {
+		setIsModalOpen(false);
+	};
+
 	// const [workList, setWorkList] = useState([]);
 
 	// useEffect(() => {
@@ -302,15 +312,23 @@ const ArtworkPage = ({ artwork }) => {
 
 	return (
 		<div>
+			{isModalOpen && (
+				<Modal onClose={handleCloseModal}>
+					<FormNewWork />
+				</Modal>
+			)}
 			<header className={classes.header}>
 				<h1>Artwork</h1>
 				<p>some graphics and videos made for use in my work!</p>
+				<button type="button" onClick={handleOpenModal}>
+					+ add
+				</button>
 			</header>
-			<main className={classes.content}>
+			{/* <main className={classes.content}>
 				{artwork.map((work, index) => (
 					<CustomGrid key={index} work={work.media} />
 				))}
-			</main>
+			</main> */}
 		</div>
 	);
 };
