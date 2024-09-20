@@ -1,6 +1,8 @@
 import CustomGrid from '@/components/CustomGrid';
+import FormNewWork from '@/components/FormNewWork';
 import classes from '@/styles/Page.module.css';
-import { useEffect, useState } from 'react';
+import Modal from '@/util/Modal';
+import { useState } from 'react';
 
 // const DUMMY_WORK = [
 // 	{
@@ -272,19 +274,31 @@ import { useEffect, useState } from 'react';
 // 	},
 // ];
 
-const ArtworkPage = () => {
-	const [workList, setWorkList] = useState([]);
+export const getStaticProps = async () => {
+	const response = await fetch('http://localhost:3000/api/artwork');
+	const resData = await response.json();
 
-	useEffect(() => {
-		const fetchData = async () => {
-			const response = await fetch('http://localhost:3000/api/work-list');
-			const resData = await response.json();
+	// setWorkList(resData.artwork);
+	return {
+		props: {
+			artwork: resData.artwork,
+		},
+	};
+};
 
-			setWorkList(resData);
-		};
+const ArtworkPage = ({ artwork }) => {
+	// const [workList, setWorkList] = useState([]);
 
-		fetchData();
-	}, []);
+	// useEffect(() => {
+	// 	const fetchData = async () => {
+	// 		const response = await fetch('http://localhost:3000/api/work-list');
+	// 		const resData = await response.json();
+
+	// 		setWorkList(resData.artwork);
+	// 	};
+
+	// 	fetchData();
+	// }, []);
 
 	return (
 		<div>
@@ -293,7 +307,7 @@ const ArtworkPage = () => {
 				<p>some graphics and videos made for use in my work!</p>
 			</header>
 			<main className={classes.content}>
-				{workList.map((work, index) => (
+				{artwork.map((work, index) => (
 					<CustomGrid key={index} work={work.media} />
 				))}
 			</main>
