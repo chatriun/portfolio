@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react';
 import Image from 'next/image';
-import classes from '@/styles/Page.module.css';
-import styles from './WorksList.module.css';
+import styles from '@/styles/Home.module.css';
 
 const ImageRow = ({ mediaArtworks }) => {
 	const [imageData, setImageData] = useState([]);
@@ -15,13 +14,14 @@ const ImageRow = ({ mediaArtworks }) => {
 
 	const calculatedWidthPercent = useMemo(() => {
 		const sum = imageData.reduce((partialSum, a) => partialSum + a, 0);
-		const newCalculated = imageData.map((data) => (data * 100) / sum);
-
+		const newCalculated = imageData.map((data) => {
+			return (data * 100) / sum;
+		});
 		return newCalculated;
 	}, [imageData]);
 
 	return (
-		<div className={classes.artworkContainer}>
+		<div className={styles.gifContainer}>
 			{mediaArtworks.map((media, index) =>
 				media.type === 'image' ? (
 					<Image

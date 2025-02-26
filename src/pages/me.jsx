@@ -1,7 +1,7 @@
-import styles from '@/styles/Old.module.css';
+import classes from '../styles/Page.module.css';
 
 const AboutMePage = () => {
-	return <div className={styles.container}></div>;
+	return <div className={classes.container}></div>;
 };
 
 export default AboutMePage;

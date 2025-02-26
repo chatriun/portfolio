@@ -27,28 +27,3 @@
   flex-direction: column;
   gap: 8px;
 }
-
-.artworkContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 1px;
-}
-
-@media screen and (min-width: 540px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (min-width: 770px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}

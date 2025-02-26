@@ -14,7 +14,7 @@ const MainNavigation = () => {
 			<header className={classes.header}>
 				<div className={classes.left}>
 					<Link href="/">
-						<h1>ANYAWEE SR. WHY DENG?</h1>
+						<h1>ANYAWEE SR.</h1>
 					</Link>
 				</div>
 				<div className={classes.right}>
@@ -24,7 +24,7 @@ const MainNavigation = () => {
 								<Link href="/work">WORK</Link>
 							</li>
 							<li>
-								<Link href="/refactor-artwork">ABOUT ME</Link>
+								<Link href="/me">ABOUT ME</Link>
 							</li>
 						</ul>
 					</nav>

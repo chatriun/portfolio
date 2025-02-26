@@ -1,5 +1,5 @@
 // TODO: search set default "select indentation" for p'Ake
-import classes from '@/styles/Page.module.css';
+import styles from '@/styles/Home.module.css';
 import WorkCategoriesCard from '@/components/WorkCategoriesCard';
 
 const DUMMY_PAGES = [
@@ -61,7 +61,7 @@ const DUMMY_PAGES = [
 
 const HomePage = () => {
 	return (
-		<main className={classes.gallery}>
+		<main className={styles.gallery}>
 			{DUMMY_PAGES.map((category) => (
 				<WorkCategoriesCard
 					key={category.id}
