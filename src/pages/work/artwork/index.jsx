@@ -1,185 +1,188 @@
 import classes from '../../../styles/Page.module.css';
 import ImageRow from '@/components/ImageRow';
 
-const ArtworkPage = () => {
-	const artwork = [
-		[
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_141.gif',
-			},
-		],
-		[
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_4.gif',
-			},
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_95.gif',
-			},
-		],
-		[
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_5.gif',
-			},
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_137.gif',
-			},
-		],
-		[
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_5-2.gif',
-			},
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_5-3.gif',
-			},
-		],
-		[
-			{
-				type: 'iframe',
-				url: 'https://www.youtube.com/embed/Bc89HufDol4',
-			},
-		],
-		[
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_28.gif',
-			},
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_4-2.gif',
-			},
-		],
-		[
-			// ระเบิด
-			{
-				type: 'iframe',
-				url: 'https://www.instagram.com/p/CP-n7rKqBIf/embed',
-				width: '600',
-				height: '760',
-			},
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_45.gif',
-			},
-		],
-		[
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_128.gif',
-			},
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_111.gif',
-			},
-		],
-		[
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_102.gif',
-			},
-		],
-		[
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_26.gif',
-			},
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_42.gif',
-			},
-		],
-		[
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_sara.gif',
-			},
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_135.gif',
-			},
-		],
-		[
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_121.gif',
-			},
-		],
-		[
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_16.gif',
-			},
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_19.gif',
-			},
-		],
-		[
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_41.gif',
-			},
-		],
-		[
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_69.gif',
-			},
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_96.gif',
-			},
-		],
-		[
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_157.gif',
-			},
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_43.gif',
-			},
-		],
-		[
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_31.gif',
-			},
-		],
-		[
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_97.gif',
-			},
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_133.gif',
-			},
-		],
-		[
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_101.gif',
-			},
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_gnd.gif',
-			},
-		],
-		[
-			{
-				type: 'image',
-				url: '/images/artwork/artwork_20.gif',
-			},
-		],
-	];
+// TODO: artwork_5 multiple load
+const ARTWORKS = [
+	[
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_141.mp4',
+		},
+	],
+	[
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_4.mp4',
+		},
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_95.mp4',
+		},
+	],
+	[
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_5.mp4',
+		},
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_137.mp4',
+		},
+	],
+	[
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_5-2.mp4',
+		},
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_5-3.mp4',
+		},
+	],
+	[
+		{
+			type: 'iframe',
+			url: 'https://www.youtube.com/embed/Bc89HufDol4',
+		},
+	],
+	[
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_28.mp4',
+		},
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_4-2.mp4',
+		},
+	],
+	[
+		// ระเบิด
+		{
+			type: 'iframe',
+			url: 'https://www.instagram.com/p/CP-n7rKqBIf/embed',
+			width: '600',
+			height: '1000',
+		},
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_45.mp4',
+		},
+	],
+	[
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_128.mp4',
+		},
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_111.mp4',
+		},
+	],
+	[
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_102.mp4',
+		},
+	],
+	[
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_26.mp4',
+		},
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_42.mp4',
+		},
+	],
+	[
+		// TODO: change soon
+		{
+			type: 'image',
+			url: '/images/artwork/artwork_sara.gif',
+		},
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_135.mp4',
+		},
+	],
+	[
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_121.mp4',
+		},
+	],
+	[
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_16.mp4',
+		},
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_19.mp4',
+		},
+	],
+	[
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_41.mp4',
+		},
+	],
+	[
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_69.mp4',
+		},
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_96.mp4',
+		},
+	],
+	[
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_157.mp4',
+		},
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_43.mp4',
+		},
+	],
+	[
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_31.mp4',
+		},
+	],
+	[
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_97.mp4',
+		},
+		// TODO: change soon
+		{
+			type: 'image',
+			url: '/images/artwork/artwork_133.gif',
+		},
+	],
+	[
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_101.mp4',
+		},
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_gnd.mp4',
+		},
+	],
+	[
+		{
+			type: 'vdo',
+			url: '/images/artwork-vdo/artwork_20.mp4',
+		},
+	],
+];
 
+const ArtworkPage = () => {
 	return (
 		<div>
 			<header className={classes.header}>
@@ -187,7 +190,7 @@ const ArtworkPage = () => {
 				<p>some graphics and videos made for use in my work</p>
 			</header>
 			<main className={classes.content}>
-				{artwork.map((row, index) => (
+				{ARTWORKS.map((row, index) => (
 					<ImageRow key={index} mediaArtworks={row} />
 				))}
 			</main>
