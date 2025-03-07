@@ -1,29 +1,38 @@
 .header {
-  padding: 10px 0 20px;
-  text-align: center;
+	padding: 10px 0 20px;
+	text-align: center;
 }
 
 .header h1 {
-  font-family: 'DM Serif Display', serif;
-  font-size: 97px;
-  font-weight: 250;
-  line-height: 1;
+	font-family: 'DM Serif Display', serif;
+	font-size: 97px;
+	font-weight: 250;
+	line-height: 1;
 }
 
 .header p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
-  margin-bottom: 24px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	margin-bottom: 24px;
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.content .videoContainer {
+	display: flex;
+	/* use warp with width */
+	/* flex-wrap: wrap; */
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
 }
